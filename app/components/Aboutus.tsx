@@ -9,7 +9,7 @@ function Aboutus() {
     \nThank you for being a part of our journey.`;
 
   return (
-    <section id='about' className='py-12 md:py-16 bg-[#F8F4EF]'>
+    <section id='about' className='py-12 md:py-16 bg-[#F8F4EF] -my-10 lg:-my-1 '>
       <div className="container mx-auto max-w-7xl px-6">
         <div className="row flex flex-col md:flex-row items-center -mx-4">
           {/* Left Section - Text */}

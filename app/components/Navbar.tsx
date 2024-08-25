@@ -55,7 +55,7 @@ export default function Navbar() {
           Creative Designs
         </a>
         <a href="#carouseltwo" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
-          How It's Made
+          Craftmanship
         </a>
         <a href="#contact" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           Connect
@@ -75,7 +75,7 @@ export default function Navbar() {
             Creative Designs
           </a>
           <a href="#carouseltwo" className="block px-4 py-3 text-lg border-b border-gray-200">
-            How It's Made
+            Craftmanship
           </a>
           <a href="#contact" className="block px-4 py-3 text-lg border-b border-gray-200">
             Connect

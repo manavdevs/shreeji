@@ -31,7 +31,7 @@ const Footer = () => {
   </div>
 
   <div className="mt-8 border-t border-[#96937D] pt-6 text-gray-500 text-center">
-    <p>©2024 Jordan Strategies. All rights reserved.</p>
+    <p>©2024 ShreeJi Jewllery. All rights reserved.</p>
   </div>
 </footer>   
 

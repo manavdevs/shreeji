@@ -93,7 +93,7 @@ const Carouseltwo = () => {
 
             {/* Text overlay for mobile screens */}
             {isSmallScreen && (
-              <div className="absolute bottom-32 w-full text-center py-2 z-20">
+              <div className="absolute bottom-20 w-full text-center py-2 z-20">
                 <p className="font-bold text-4xl text-black">{slide.title}</p>
                 <p className="mt-1 font-bold text-lg p-2 text-black">{slide.description}</p>
               </div>
