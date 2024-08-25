@@ -14,7 +14,7 @@ function Aboutus() {
         <div className="row flex flex-col md:flex-row items-center -mx-4">
           {/* Left Section - Text */}
           <div className='md:w-1/2 text-center md:text-left px-4'>
-            <blockquote className="text-4xl md:text-5xl text-[#8B734D] font-serif leading-relaxed mb-8">
+            <blockquote className="text-4xl md:text-5xl text-[#8B734D] font-serif leading-relaxed mb-3">
               "Our ability to embrace change, innovation, and tradition"
             </blockquote>
             <p className="text-lg lg:text-xl text-[#454545] leading-relaxed whitespace-pre-line mb-6">

@@ -103,14 +103,14 @@ const Carouselthree = () => {
       {/* Slider controls */}
       <button
         type="button"
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 text-black hover:text-white transition-all cursor-pointer"
+        className="absolute top-1/2 left-1 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 text-white hover:text-amber-400 lg:text-black transition-all cursor-pointer"
         onClick={goToPrevSlide}
       >
         <span className="text-8xl font-light">&#8249;</span>
       </button>
       <button
         type="button"
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 text-black hover:text-white transition-all cursor-pointer"
+        className="absolute top-1/2 right-1 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 text-white hover:text-amber-400 lg:text-black transition-all cursor-pointer"
         onClick={goToNextSlide}
       >
         <span className="text-8xl font-light">&#8250;</span>
