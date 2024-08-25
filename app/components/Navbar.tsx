@@ -1,37 +1,17 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
   };
 
-  // Add scroll event listener
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <nav
-      className={`sticky top-0 h-[90px] md:h-[90px] flex items-center justify-between px-4 mx-auto md:px-20 shadow-lg z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black bg-opacity-45 " : "bg-[#d2c2a3] bg-opacity-50"
-      }`}
+      className="fixed top-0 left-0 w-full h-[90px] md:h-[90px] flex items-center justify-between px-4 mx-auto md:px-20 z-50 bg-black bg-opacity-45"
     >
       {/* Logo */}
       <div className="flex items-center">
@@ -40,11 +20,15 @@ export default function Navbar() {
 
       {/* Hamburger menu for small screens */}
       <div className="md:hidden flex items-center">
-        <RxHamburgerMenu size={28} className={`${isScrolled?'text-white' : 'text-black'}`} onClick={handleHamburgerClick} />
+        <RxHamburgerMenu
+          size={28}
+          className="text-white"
+          onClick={handleHamburgerClick}
+        />
       </div>
 
       {/* Links for medium and larger screens */}
-      <div className={`hidden md:flex flex-1 items-center justify-end space-x-8 text-black font-semibold ${isScrolled? "text-white" : ""}`}>
+      <div className="hidden md:flex flex-1 items-center justify-end space-x-8 text-white font-semibold">
         <a href="#carousel" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           Home
         </a>
@@ -55,9 +39,9 @@ export default function Navbar() {
           Creative Designs
         </a>
         <a href="#carouseltwo" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
-          Craftmanship
+          How It's Made
         </a>
-        <a href="#contact" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
+        <a href="#connect" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           Connect
         </a>
       </div>
@@ -75,9 +59,9 @@ export default function Navbar() {
             Creative Designs
           </a>
           <a href="#carouseltwo" className="block px-4 py-3 text-lg border-b border-gray-200">
-            Craftmanship
+            How It's Made
           </a>
-          <a href="#contact" className="block px-4 py-3 text-lg border-b border-gray-200">
+          <a href="#connect" className="block px-4 py-3 text-lg border-b border-gray-200">
             Connect
           </a>
         </div>
