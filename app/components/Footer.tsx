@@ -23,8 +23,8 @@ const Footer = () => {
       <div className="col-span-1 lg:col-span-2">
         <h3 className="font-semibold text-lg">Get in Touch</h3>
         <p className="mt-4 py-4">
-          <strong >Phone:</strong> +91 81791 11730 <br></br><br></br>
-          <strong>Address:</strong> Hyderabad
+          <strong >Phone: </strong> +91 81791 11730 <br></br><br></br>
+          <strong>Address: </strong> <br/>4-1-970, 305/A, Ahuja Estate, Upasana Building, Abids, Hyderabad, Telangana 500001
         </p>
       </div>
     </div>

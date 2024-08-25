@@ -71,7 +71,9 @@ const Carousel = () => {
   return (
     <div id="carousel" className="relative w-full h-auto overflow-hidden">
       <div
-        className="relative w-full h-full flex transition-transform duration-1000 ease-in-out"
+        className={`relative w-full h-full flex transition-transform duration-1000 ease-in-out ${
+          isSmallScreen ? 'min-h-[100vh]' : ''
+        }`}
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
@@ -80,7 +82,7 @@ const Carousel = () => {
             <Link href={slide.href}>
               <img
                 src={isSmallScreen ? slide.srcSmall : slide.srcLarge}
-                className={`w-full h-auto ${isSmallScreen ? '' : 'lg:h-[100vh] object-cover'}`}
+                className={`w-full h-auto ${isSmallScreen ? 'min-h-[100vh] object-cover' : 'lg:h-[100vh] object-cover'}`}
                 alt={`Slide ${index + 1}`}
               />
             </Link>
@@ -94,21 +96,25 @@ const Carousel = () => {
                 </p>
               </div>
             )}
+
+            {/* Text overlay for small screens */}
+            {isSmallScreen && (
+              <div className="absolute inset-0 flex flex-col justify-end items-center text-white text-center pb-6 px-4">
+                {/* Add Shree.png image above the description */}
+                <img src="/images/shree.png" alt="Shree" className="mb-4 h-12" /> {/* Adjust height as needed */}
+                <div className="text-2xl font-bold tracking-wide leading-tight drop-shadow-xl">
+                  {slide.description}
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>
 
-   
-      {isSmallScreen && (
-        <div className="w-full bg-[#3F4020] flex flex-col justify-center text-center py-6 text-white">
-          <p className="text-sm mt-2">{slides[activeIndex].description}</p>
-        </div>
-      )}
-
-    {/* slider controls */}
+      {/* slider controls */}
       <button
         type="button"
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 text-gray-400 hover:text-white   transition-all cursor-pointer"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 text-gray-400 hover:text-white transition-all cursor-pointer"
         onClick={goToPrevSlide}
       >
         <span className="text-8xl font-light">&#8249;</span>
