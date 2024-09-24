@@ -41,7 +41,7 @@ export default function Navbar() {
         <a href="#carouseltwo" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           How It's Made
         </a>
-        <a href="#connect" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
+        <a href="#contact" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           Connect
         </a>
       </div>

@@ -15,9 +15,9 @@ const Footer = () => {
         <ul>
         <li className='py-4'><a href='#carousel' className="font-semibold text-lg">Home</a></li>
         <li className='py-4'><a href='#about' className="font-semibold text-lg">About</a></li>
-        <li className='py-4'><a href='#jewellery' className="font-semibold text-lg">Jewelry</a></li>
-        <li className='py-4'><a href='#craftmanship' className="font-semibold text-lg">Craftsmanship</a></li>
-        <li className='py-4'><a href='#conatct' className="font-semibold text-lg">Contact</a></li>
+        <li className='py-4'><a href='#carouselthree' className="font-semibold text-lg">Jewelry</a></li>
+        <li className='py-4'><a href='#carouseltwo' className="font-semibold text-lg">Craftsmanship</a></li>
+        <li className='py-4'><a href='#contact' className="font-semibold text-lg">Contact</a></li>
         </ul>
       </div>
       <div className="col-span-1 lg:col-span-2">
