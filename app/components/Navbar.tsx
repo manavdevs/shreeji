@@ -29,40 +29,43 @@ export default function Navbar() {
 
       {/* Links for medium and larger screens */}
       <div className="hidden md:flex flex-1 items-center justify-end space-x-8 text-white font-semibold">
-        <a href="#carousel" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
+        <a href="/#carousel" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           Home
         </a>
-        <a href="#about" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
+        <a href="/#about" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           Our Director
         </a>
-        <a href="#carouselthree" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
+        <a href="/#carouselthree" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           Creative Designs
         </a>
-        <a href="#carouseltwo" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
+        <a href="/#carouseltwo" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           How It's Made
         </a>
-        <a href="#contact" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
+        <a href="/#contact" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
           Connect
+        </a>
+        <a href="/store" className="text-lg hover:text-yellow-400 transition duration-300 ease-in-out">
+          Store
         </a>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden absolute top-[90px] left-0 w-full bg-white text-black shadow-lg z-50">
-          <a href="#carousel" className="block px-4 py-3 text-lg border-b border-gray-200">
+          <a href="/#carousel" className="block px-4 py-3 text-lg border-b border-gray-200">
             Home
           </a>
-          <a href="#about" className="block px-4 py-3 text-lg border-b border-gray-200">
+          <a href="/#about" className="block px-4 py-3 text-lg border-b border-gray-200">
             Our Director
           </a>
-          <a href="#carouselthree" className="block px-4 py-3 text-lg border-b border-gray-200">
+          <a href="/#carouselthree" className="block px-4 py-3 text-lg border-b border-gray-200">
             Creative Designs
           </a>
-          <a href="#carouseltwo" className="block px-4 py-3 text-lg border-b border-gray-200">
+          <a href="/#carouseltwo" className="block px-4 py-3 text-lg border-b border-gray-200">
             How It's Made
           </a>
-          <a href="#connect" className="block px-4 py-3 text-lg border-b border-gray-200">
-            Connect
+          <a href="/#contact" className="block px-4 py-3 text-lg border-b border-gray-200">
+            Store
           </a>
         </div>
       )}
