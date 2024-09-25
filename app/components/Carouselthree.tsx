@@ -55,66 +55,13 @@ const Carouselthree = () => {
   }, []);
 
   return (
-    <div
-      id="carouselthree"
-      className="relative w-full h-[100vh] overflow-hidden"
-    >
-      <div
-        className="relative w-full h-full flex transition-transform duration-1000 ease-in-out"
-        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className="w-full flex-shrink-0 h-full relative">
-            <Link href={slide.href}>
-              <img
-                src={isSmallScreen ? slide.srcSmall : slide.srcLarge}
-                className="w-full h-full object-fill" // Resizes image to fill the carousel space
-                alt={`Slide ${index + 1}`}
-              />
-            </Link>
-
-            {/* Text overlay for mobile screens */}
-            {isSmallScreen && (
-              <>
-              <hr></hr>
-                {/* Item name at the top */}
-                <div className="absolute top-6 mt-20 w-full text-center text-3xl font-bold text-black  z-20">
-                  {slide.title}
-                </div>
-
-                {/* Description at the bottom */}
-                <div className="absolute bottom-28 w-full text-center text-lg text-white bg-black/50 py-2 z-20">
-                  {slide.description} 
-                </div>
-              </>
-            )}
-
-            {/* Text overlay for large screens */}
-            {!isSmallScreen && (
-              <div className="absolute left-20 inset-y-0 flex flex-col justify-center pl-10 text-white z-20 w-1/3"> 
-                <h2 className="text-6xl text-black font-bold mb-4">{slide.title}</h2>
-                <p className="text-xl text-black">{slide.description}</p>
-              </div>
-            )}
-          </div>
-        ))}
+    <div className="flex items-center justify-center h-screen bg-[#F8F4EF] opacity-70 text-gray-800 relative">
+      {/* Centered Content */}
+      <div className="flex flex-col items-center text-center">
+        {/* Logo Image */}
+        {/* Coming Soon Text */}
+        <h1 className="text-4xl lg:text-6xl font-bold">Collections Coming Soon...</h1>
       </div>
-
-      {/* Slider controls */}
-      <button
-        type="button"
-        className="absolute top-1/2 left-1 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 text-white hover:text-amber-400 lg:text-black transition-all cursor-pointer"
-        onClick={goToPrevSlide}
-      >
-        <span className="text-8xl font-light">&#8249;</span>
-      </button>
-      <button
-        type="button"
-        className="absolute top-1/2 right-1 transform -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 text-white hover:text-amber-400 lg:text-black transition-all cursor-pointer"
-        onClick={goToNextSlide}
-      >
-        <span className="text-8xl font-light">&#8250;</span>
-      </button>
     </div>
   );
 };
